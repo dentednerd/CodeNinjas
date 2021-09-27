@@ -1,3 +1,3 @@
 module.exports = {
-  ROOT: 'https://codeninjasserver.herokuapp.com/api',
+  ROOT: 'https://codeninjas-api.herokuapp.com/api',
 };
