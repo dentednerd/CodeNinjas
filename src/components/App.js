@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Header from './Header';
 
-const App = ({ children }) => {
+function App({ children }) {
   return (
     <div className="columns">
       <div className="column" />
@@ -13,7 +13,7 @@ const App = ({ children }) => {
       <div className="column" />
     </div>
   );
-};
+}
 
 App.propTypes = {
   children: PropTypes.any.isRequired,

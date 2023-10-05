@@ -1,4 +1,4 @@
-/* defaults and resets */ 
+/* defaults and resets */
 
 @font-face {
   font-family: Karate;
@@ -32,13 +32,13 @@ body, html {
 
 body {
   background-color: #000;
-  background-image: url('../Images/backgrounds/rooftops.png');
+  background-image: url('./Images/backgrounds/rooftops.png');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   -webkit-background-size: cover;
   -moz-background-size: cover;
-  -o-background-size: cover; 
+  -o-background-size: cover;
 }
 
 .columns {
@@ -70,14 +70,14 @@ body {
   flex-flow: row nowrap;
   justify-content: flex-start;
   align-items: center;
-} 
+}
 
 /* home and login */
 
 .Home {
   width: 50%;
   margin: 0 auto;
-} 
+}
 
 .Home img {
   width:50%;
@@ -169,7 +169,7 @@ body {
   margin: 10px;
   white-space: normal;
   word-wrap: break-word;
-  overflow-wrap: break-word; 
+  overflow-wrap: break-word;
   height:auto;
   min-width:100%;
   /* overflow:hidden; */
@@ -182,7 +182,7 @@ body {
     border:none;
     white-space: normal;
     word-wrap: break-word;
-    overflow-wrap: break-word; 
+    overflow-wrap: break-word;
     height:auto;
     /* overflow:hidden; */
 }
@@ -234,7 +234,7 @@ body {
   margin: 10px;
   white-space: normal;
   word-wrap: break-word;
-  overflow-wrap: break-word; 
+  overflow-wrap: break-word;
   height:auto;
   min-width:100%;
 }

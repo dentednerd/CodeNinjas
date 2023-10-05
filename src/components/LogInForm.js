@@ -1,59 +1,43 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { connect } from 'react-redux';
-import { loginUser } from '../actions/auth';
+import React, { useState, useEffect } from 'react';
+import { useHistory } from 'react-router-dom';
+import { UpdateUser } from '../hooks/UserContext';
+import { fetchUsers } from '../utils/api';
 
-class LogInForm extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      userName: '',
-    };
-    this.handleChange = this.handleChange.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
-  }
+function LogInForm() {
+  const [users, setUsers] = useState([]);
+  const setUsername = UpdateUser();
+  const history = useHistory();
 
-  handleChange(e) {
-    this.setState({
-      userName: e.target.value,
-    });
-  }
-
-  handleSubmit(e) {
-    e.preventDefault();
-    if (this.state.userName.length === 0) return;
-    this.props.loginUser(this.state.userName);
-    this.setState({ userName: '' });
-    this.props.redirect();
-  }
-
-  render() {
-    return (
-      <form className="LogInForm" onSubmit={this.handleSubmit}>
-        <input
-          className="input"
-          type="text"
-          placeholder="Your ninja name here"
-          value={this.state.userName}
-          onChange={this.handleChange}
-        />
-        <button className="button" type="submit">Log In</button>
-      </form>
-    );
-  }
-}
-
-LogInForm.propTypes = {
-  loginUser: PropTypes.func.isRequired,
-  redirect: PropTypes.func.isRequired,
-};
-
-function mapDispatchToProps(dispatch) {
-  return {
-    loginUser: (userName) => {
-      dispatch(loginUser(userName));
-    },
+  const logInNewUser = (username) => {
+    setUsername(username);
+    history.push('/');
   };
+
+  useEffect(() => {
+    fetchUsers().then((users) => {
+      setUsers(users);
+    });
+  }, []);
+
+  if (!users) return null;
+
+  return (
+    <section className="content">
+      {users.map((user) => {
+        return (
+          <div key={user.username}>
+            <h2>{user.username}</h2>
+            <button
+              type="button"
+              onClick={() => { logInNewUser(user.username); }}
+            >
+              Log in
+            </button>
+          </div>
+        );
+      })}
+    </section>
+  );
 }
 
-export default connect(null, mapDispatchToProps)(LogInForm);
+export default LogInForm;
