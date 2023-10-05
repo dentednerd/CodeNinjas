@@ -1,11 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { GetUser } from '../hooks/UserContext';
-import './UserProfile.css';
-
-const levelNames = [
-  'Academy', 'Gennin', 'Chunnin', 'Jounin', 'Special Jounin', 'Kage', 'ANBU', 'S-Class', 'Ninja',
-];
+import { GetUser } from '../../hooks/UserContext';
+import levels from '../../config';
 
 function UserProfile() {
   const [isLoading, setIsLoading] = useState(true);
@@ -30,7 +26,7 @@ function UserProfile() {
               </figure>
               <h2>
                 Current level:&nbsp;
-                {levelNames[user.level]}
+                {levels[user.level].levelName}
               </h2>
             </div>
             <Link

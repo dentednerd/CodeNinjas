@@ -1,0 +1,42 @@
+#home {
+  margin: 0 auto;
+} 
+
+#home .welcome {
+  background-color:#fff;
+  border-radius:10px;
+  color:#333;
+  text-shadow:none;
+  padding: 10px;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#home .welcome .welcome-text {
+  padding: 0 2em;
+}
+
+#home .welcome .welcome-text p {
+  text-align: left;
+  margin-bottom: 2em;
+}
+
+#home .welcome .welcome-text p.center {
+  text-align: center;
+}
+
+#home .welcome .welcome-text p .button.begin {
+  margin-bottom: 2em;
+}
+
+#home .welcome .welcome-text p .button.begin:focus {
+  animation: none;
+  background-color: #fff;
+}
+
+#home img {
+  margin: 0 auto;
+  width: 300px;
+}

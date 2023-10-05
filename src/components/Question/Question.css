@@ -1,0 +1,99 @@
+.question {
+  text-align:left;
+}
+
+.question .progress-bar {
+  position: relative;
+  width: 100%;
+  height: 2em;
+  margin-bottom: 2em;
+}
+
+.question .progress-bar span {
+  position: absolute;
+  width: 100%;
+  height: 2em;
+  text-align: center;
+  line-height: 2em;
+}
+
+.question .progress-bar img {
+  position: absolute;
+  top: -1em;
+  left: -1em;
+  height: 4em;
+}
+
+.question .sensei {
+  background-color:#FFF;
+  border-radius:10px;
+  color:#333;
+  text-shadow:none;
+  padding: 10px;
+  margin: 10px 0;
+  min-height: 200px !important;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.question .sensei img.senseiSays {
+  width: 200px;
+}
+
+.question .example {
+  background-color:#000;
+  color: #fff;
+  border-radius: 10px;
+  padding:20px;
+  margin: 2em 0;
+  font: normal 1em 'Courier New', monospace;
+  text-shadow: none;
+}
+
+.question .your-turn {
+  padding: 2em;
+  border-radius: 10px;
+  margin-bottom: 2em;
+  border: solid 3px #333;
+}
+
+.question .your-turn h2 {
+  margin: 0 0 1em 0;
+}
+
+.question .your-turn .answers {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.question .your-turn .answers .button {
+  margin: 10px;
+  white-space: normal;
+  word-wrap: break-word;
+  overflow-wrap: break-word; 
+  height:auto;
+  max-width: 50%;
+  width: 50%;
+  min-width: 200px;
+}
+
+.question .progress-bar progress {
+  color: #0063a6;
+  font-size: .6em;
+  line-height: 1.5em;
+  text-indent: .5em;
+  width: 15em;
+  height: 2em;
+  border-radius: 1em;
+  border: 1px solid #0063a6;
+  background: #fff;
+}
+
+.question .button.flipper {
+  animation: none;
+  width: 100%;
+}

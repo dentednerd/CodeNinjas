@@ -1,0 +1,61 @@
+#congrats {
+  display:flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items:center;
+  margin:0 auto;
+}
+
+#congrats h1 {
+  margin: 0;
+  -webkit-animation: textflash 0.5s linear 0s infinite alternate;
+  animation: textflash 0.5s linear 0s infinite alternate;
+}
+
+@keyframes textflash {
+  from {text-shadow: 0px 0px 2em #ff0;}
+  to {text-shadow: none;}
+}
+
+#congrats .congrats-text {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#congrats .congrats-text p, #congrats .sensei p {
+  padding: 0 2em;
+}
+
+#congrats a.button {
+  width: 100%;
+  margin-bottom: 1em;
+}
+
+#congrats img {
+  width: 300px;
+  margin: 2em auto;
+}
+
+#congrats .sensei {
+  background-color:#fff;
+  border-radius:10px;
+  color:#333;
+  text-shadow:none;
+  padding: 10px;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin: 2em auto;
+  position: relative;
+}
+
+#congrats .sensei img.codeninja {
+  height: 300px;
+  width: auto;
+  position: absolute;
+  bottom: -150px;
+  right: -100px;
+}

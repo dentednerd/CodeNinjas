@@ -1,0 +1,22 @@
+#credits .sensei {
+  background-color:#fff;
+  border-radius:10px;
+  color:#333;
+  text-shadow:none;
+  padding: 10px;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: space-between;
+  margin: 2em auto;
+  position: relative;
+}
+
+#credits .sensei a {
+  color: #c1002e;
+}
+
+#credits .button {
+  animation: none;
+  width: 100%;
+}
