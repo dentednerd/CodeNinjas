@@ -1,0 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono&family=Reggae+One&display=swap');
+
+@font-face {
+  font-family: Karate;
+  src: local('Karate'), url(./assets/Karate.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: OpenDyslexicAlta-Regular;
+  src: local('OpenDyslexicAlta-Regular'), url(./assets/OpenDyslexicAlta-Regular.otf) format('opentype');
+}
